@@ -2,6 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Undergraduate Astronomy Society</title>
 
   <style>
@@ -136,6 +138,33 @@ figcaption h3 {
 
 .links-container a:hover {
   text-shadow: 0 0 8px #FFD60A88;
+}
+/* 📱 Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+
+  .image-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .image-row img {
+    width: 90%;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .links-container {
+    gap: 20px;
+  }
+
 }
 
   </style>
