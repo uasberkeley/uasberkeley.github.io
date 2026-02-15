@@ -1,0 +1,229 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Spring 2026 Schedule | UAS</title>
+
+  <!-- Optional: If you want Cinzel on this page too -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #000814;
+      color: #FFD60A;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 42px;
+      letter-spacing: 1.5px;
+      margin: 0 0 10px 0;
+      text-shadow: 0 0 6px #FFD60A33;
+    }
+
+    h2 {
+      font-weight: normal;
+      margin: 0 0 30px 0;
+      opacity: 0.95;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .note {
+      border: 1px solid #FFD60A;
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 18px;
+      background: rgba(255, 214, 10, 0.06);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 12px;
+      border: 1px solid #FFD60A;
+    }
+
+    thead th {
+      text-align: left;
+      padding: 14px 12px;
+      border-bottom: 1px solid #FFD60A;
+      background: rgba(255, 214, 10, 0.08);
+      font-size: 16px;
+    }
+
+    tbody td {
+      padding: 14px 12px;
+      border-bottom: 1px solid rgba(255, 214, 10, 0.35);
+      vertical-align: top;
+      font-size: 15px;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .room {
+      white-space: nowrap;
+      font-weight: 700;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 3px 10px;
+      border: 1px solid #FFD60A;
+      border-radius: 999px;
+      font-size: 12px;
+      margin-left: 8px;
+      opacity: 0.95;
+    }
+
+    .cancelled {
+      color: #FFD60A;
+      font-weight: 700;
+    }
+
+    .muted {
+      opacity: 0.85;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Spring 2026 Schedule</h1>
+  <h2>. ܁ ₊ ⊹ . ܁ ✮⋆˙⟡ ܁ * . ⊹⋆ ｡ 𖦹 .° ⭒˚ . * ｡⋆ ✮⋆˙ ₊ ܁.</h2>
+
+  <div class="container">
+    <div class="note">
+      <strong>Meetings:</strong> Thursdays <span class="muted">(room listed below)</span><br>
+      <span class="muted">Schedule subject to change. “TBD” items will be updated.</span>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 130px;">Date (2026)</th>
+          <th style="width: 120px;">Room</th>
+          <th>Topic</th>
+          <th style="width: 200px;">Host / Lead</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Jan 29</td>
+          <td class="room">131</td>
+          <td>Info Session</td>
+          <td class="muted">—</td>
+        </tr>
+
+        <tr>
+          <td>Feb 5</td>
+          <td class="room">131</td>
+          <td>Star Hopping</td>
+          <td>Riley D. Patlak</td>
+        </tr>
+
+        <tr>
+          <td>Feb 12</td>
+          <td class="room">131</td>
+          <td>Valentine’s Theme Scavenger Hunt</td>
+          <td>Alaina Marie Tripp</td>
+        </tr>
+
+        <tr>
+          <td>Feb 19</td>
+          <td class="room">131</td>
+          <td>Cold Email Workshop</td>
+          <td>Maya + Shrey</td>
+        </tr>
+
+        <tr>
+          <td>Feb 26</td>
+          <td class="room">131</td>
+          <td>Student Showcase</td>
+          <td class="muted">—</td>
+        </tr>
+
+        <tr>
+          <td>Mar 5</td>
+          <td class="room">131</td>
+          <td>Academic Marathon <span class="tag">Start</span></td>
+          <td class="muted">—</td>
+        </tr>
+
+        <tr>
+          <td>Mar 12</td>
+          <td class="room">131</td>
+          <td>
+            Astrophotography Workshop
+            <span class="muted">(possibly moved to April — Andrew to confirm)</span>
+          </td>
+          <td>Andrew</td>
+        </tr>
+
+        <tr>
+          <td>Mar 19</td>
+          <td class="room">131</td>
+          <td>
+            Academic Marathon <span class="tag">End</span><br>
+            Summary of Astro Upper Divs <span class="muted">(labs + theory)</span>
+          </td>
+          <td class="muted">—</td>
+        </tr>
+
+        <tr>
+          <td>Mar 26</td>
+          <td class="room muted">—</td>
+          <td class="cancelled">NO MEETING</td>
+          <td class="muted">—</td>
+        </tr>
+
+        <tr>
+          <td>Apr 2</td>
+          <td class="room">121</td>
+          <td>Ethics Presentation? <span class="muted">(TBD)</span></td>
+          <td class="muted">—</td>
+        </tr>
+
+        <tr>
+          <td>Apr 9</td>
+          <td class="room">131</td>
+          <td>Cluster Stuff — Gartic Phone</td>
+          <td class="muted">—</td>
+        </tr>
+
+        <tr>
+          <td>Apr 16</td>
+          <td class="room">131</td>
+          <td class="muted">TBD</td>
+          <td class="muted">—</td>
+        </tr>
+
+        <tr>
+          <td>Apr 23</td>
+          <td class="room">131</td>
+          <td class="muted">TBD</td>
+          <td class="muted">—</td>
+        </tr>
+
+        <tr>
+          <td>Apr 30</td>
+          <td class="room">131</td>
+          <td class="muted">TBD</td>
+          <td class="muted">—</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
