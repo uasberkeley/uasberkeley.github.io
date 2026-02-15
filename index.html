@@ -8,15 +8,15 @@
 
     /* 🌌 Darker Background */
     body {
-      background-color: #000814;   /* darker navy */
-      color: #FFD60A;              /* sunflower yellow */
-      text-align: center;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 40px 20px;
-    }
+  background-color: #000814;
+  color: #FFD60A;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 40px 20px;
+}
 
-    h1 {
+h1 {
   font-family: 'Cinzel', serif;
   font-size: 42px;
   letter-spacing: 1.5px;
@@ -25,28 +25,49 @@
   text-shadow: 0 0 6px #FFD60A33;
 }
 
+h2 {
+  font-weight: normal;
+  margin-bottom: 40px;
+}
 
-    h2 {
-      font-weight: normal;
-      margin-bottom: 40px;
-    }
-
-    /* 🌠 Image Layout */
-    .image-row {
+/* Image Row Layout */
+.image-row {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 15px;   /* ← THIS is the spacing between images */
-  margin-top: 40px;
-
-    /* 🌻 Thin Yellow Border Around Images */
-    .image-row {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 15px;   /* ← THIS is the spacing between images */
+  gap: 15px;
   margin-top: 40px;
 }
+
+/* Make ALL images same controlled size */
+.image-row img {
+  width: 300px;      /* fixed width */
+  height: 260px;     /* fixed height */
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #FFD60A;
+}
+
+figcaption {
+  margin-top: 12px;
+}
+
+figcaption h3 {
+  margin: 6px 0 4px 0;
+  font-size: 18px;
+}
+
+.photo-credit {
+  margin: 0;
+  font-size: 13px;
+  font-style: italic;
+}
+
+.description {
+  margin-top: 6px;
+  font-size: 14px;
+}
+
 
 
 /* Smaller outer images */
