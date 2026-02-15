@@ -35,13 +35,32 @@
     }
 
     /* 🌻 Thin Yellow Border Around Images */
-    .image-row img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      border-radius: 12px;
-      border: 2px solid #FFD60A;   /* thinner border */
-    }
+    .image-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+/* Smaller outer images */
+.small img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #FFD60A;
+}
+
+/* Larger center image */
+.large img {
+  width: 420px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #FFD60A;
+}
+
 
     figcaption {
       margin-top: 12px;
