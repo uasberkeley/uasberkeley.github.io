@@ -108,6 +108,52 @@
   flex-direction: column;
   gap: 10px;
 }
+/* 🌌 Cluster Navbar */
+.cluster-navbar {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+
+.cluster-navbar a,
+.cluster-navbar a:visited {
+  color: #FFD60A;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-size: 18px;
+}
+
+.cluster-navbar a:hover {
+  text-shadow: 0 0 8px #FFD60A88;
+}
+
+/* 🏆 Rankings */
+.rankings {
+  margin-top: 20px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Highlight leader */
+.leader {
+  font-weight: bold;
+  text-shadow: 0 0 10px #FFD60A66;
+  animation: glow 2.5s ease-in-out infinite alternate;
+}
+
+/* ✨ Subtle glow animation */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 6px #FFD60A55;
+  }
+  to {
+    text-shadow: 0 0 18px #FFD60A99;
+  }
+}
 
   </style>
 </head>
@@ -123,6 +169,12 @@
   </nav>
 
   <h1>Cluster Mentorship Program</h1>
+  <nav class="cluster-navbar">
+    <a href="hercules.html">Hercules</a>
+    <a href="hyades.html">Hyades</a>
+    <a href="omega-centauri.html">Omega Centauri</a>
+    <a href="pleiades.html">Pleiades</a>
+  </nav>
 
   <div class="divider"></div>
 
@@ -150,12 +202,15 @@
 
     <h2>Current Cluster Rankings</h2>
 
-    <div class="rankings">
-      <div>Pleiades: 2000</div>
-      <div>Omega Centauri: 1860</div>
-      <div>Hyades: 1850</div>
-      <div>Hercules: 1600</div>
-    </div>
+<div class="rankings">
+  <div class="leader">
+    🏆 Pleiades: 2000
+  </div>
+  <div>Omega Centauri: 1860</div>
+  <div>Hyades: 1850</div>
+  <div>Hercules: 1600</div>
+</div>
+
 
   </section>
 
