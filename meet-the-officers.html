@@ -6,28 +6,6 @@
   <title>Meet the Officers!</title>
 
   <style>
-/* 🌌 Main Navbar */
-.navbar {
-  display: flex;
-  justify-content: center;
-  gap: 60px;               /* ← controls spacing */
-  margin-bottom: 30px;
-  padding-bottom: 15px;
-}
-
-.navbar a,
-.navbar a:visited {
-  color: #FFD60A;          /* sunflower yellow */
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  font-size: 20px;
-  transition: 0.3s ease;
-}
-
-.navbar a:hover {
-  text-shadow: 0 0 8px #FFD60A88;
-}
-
     body {
       background-color: #000814;
       color: #FFD60A;
@@ -36,7 +14,31 @@
       margin: 0;
       padding: 40px 20px;
     }
-    
+
+    /* 🌌 Main Navbar */
+    .navbar {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+      flex-wrap: wrap;              /* ✅ allows wrapping */
+      row-gap: 14px;                /* ✅ spacing when it wraps */
+    }
+
+    .navbar a,
+    .navbar a:visited {
+      color: #FFD60A;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      font-size: 20px;
+      transition: 0.3s ease;
+    }
+
+    .navbar a:hover {
+      text-shadow: 0 0 8px #FFD60A88;
+    }
+
     h1 {
       font-size: 42px;
       letter-spacing: 1.5px;
@@ -51,7 +53,6 @@
       opacity: 0.85;
     }
 
-    /* Optional subtle divider */
     .divider {
       width: 200px;
       height: 1px;
@@ -60,23 +61,49 @@
       opacity: 0.6;
     }
 
+    /* 📱 Mobile adjustments */
+    @media (max-width: 600px) {
+      body {
+        padding: 24px 16px;
+      }
+
+      .navbar {
+        gap: 18px;                 /* ✅ smaller spacing on phone */
+      }
+
+      .navbar a,
+      .navbar a:visited {
+        font-size: 16px;           /* ✅ smaller text on phone */
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .under-construction {
+        font-size: 18px;
+      }
+
+      .divider {
+        width: 140px;
+      }
+    }
   </style>
 </head>
 
 <body>
- <nav class="navbar">
+  <nav class="navbar">
     <a href="index.html">Home</a>
     <a href="meet-the-officers.html">Meet the Officers</a>
     <a href="telescope-crew.html">Telescope Crew</a>
     <a href="cluster-mentorship-program.html">Cluster Mentorship Program</a>
   </nav>
-  <h1>Meet the Officers</h1>
 
+  <h1>Meet the Officers</h1>
   <div class="divider"></div>
 
   <div class="under-construction">
     Who keeps UAS going...? Find out soon ~~~
   </div>
-
 </body>
 </html>
