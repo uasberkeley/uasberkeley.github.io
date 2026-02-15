@@ -5,95 +5,116 @@
   <title>Undergraduate Astronomy Society</title>
 
   <style>
+
+    /* 🌌 Background + Global Text Theme */
+    body {
+      background-color: #000814;      /* deep navy */
+      color: #FFD60A;                 /* sunflower yellow */
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-weight: normal;
+      margin-bottom: 40px;
+    }
+
+    /* 🌠 Image Layout */
     .image-row {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 40px;
-}
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
 
-.image-row figure {
-  width: 30%;
-  margin: 0;
-}
+    .image-row figure {
+      width: 30%;
+      margin: 0;
+    }
 
-.image-row img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 12px;
-}
+    .image-row img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
 
-figcaption {
-  margin-top: 12px;
-}
+    figcaption {
+      margin-top: 12px;
+    }
 
-figcaption h3 {
-  margin: 6px 0 4px 0;
-  font-size: 18px;
-}
+    figcaption h3 {
+      margin: 6px 0 4px 0;
+      font-size: 18px;
+    }
 
-.photo-credit {
-  margin: 0;
-  font-size: 13px;
-  color: #666;
-  font-style: italic;
-}
+    /* Remove gray — inherit sunflower */
+    .photo-credit {
+      margin: 0;
+      font-size: 13px;
+      font-style: italic;
+    }
 
-.description {
-  margin-top: 6px;
-  font-size: 14px;
-  color: #444;
-}
+    .description {
+      margin-top: 6px;
+      font-size: 14px;
+    }
 
   </style>
 </head>
 
 <body>
+
   <h1>Undergraduate Astronomy Society at UC Berkeley</h1>
   <h2>. ܁ ₊ ⊹ . ܁ ✮⋆˙⟡ ܁ * . ⊹⋆ ｡ 𖦹 .° ⭒˚ . * ｡⋆ ✮⋆˙ ₊ ܁. ݁₊ ⊹ ⋆｡˚｡⋆. ݁˖ . ݁</h2>
 
   <div class="image-row">
 
-  <figure>
-    <img src="moonphoto.jpeg" alt="The Moon">
-    <figcaption>
-      <h3>The Moon</h3>
-      <p class="photo-credit">Photo Credit: Milana Berhe</p>
-      <p class="description">
-        This photo was taken on a Newtonian telescope during a star party.
-      </p>
-    </figcaption>
-  </figure>
+    <figure>
+      <img src="moonphoto.jpeg" alt="The Moon">
+      <figcaption>
+        <h3>The Moon</h3>
+        <p class="photo-credit">Photo Credit: Milana Berhe</p>
+        <p class="description">
+          This photo was taken on a Newtonian telescope during a star party.
+        </p>
+      </figcaption>
+    </figure>
 
-  <figure>
-    <img src="starparty1-converted-from-jpeg.jpeg" alt="Star Party Fall 2025">
-    <figcaption>
-      <h3>Star Party – Fall 2025</h3>
-      <p class="photo-credit">Photo Credit: Milana Berhe</p>
-      <p class="description">
-        This is a photo of some club members at a star party from Fall 2025!
-        They were all trained in UAS to operate Schmidt-Cassegrain,
-        Newtonian, and the Richard Treffers Dome Telescope.
-      </p>
-    </figcaption>
-  </figure>
+    <figure>
+      <img src="starparty1-converted-from-jpeg.jpeg" alt="Star Party Fall 2025">
+      <figcaption>
+        <h3>Star Party – Fall 2025</h3>
+        <p class="photo-credit">Photo Credit: Milana Berhe</p>
+        <p class="description">
+          This is a photo of some club members at a star party from Fall 2025!
+          They were all trained in UAS to operate Schmidt-Cassegrain,
+          Newtonian, and the Richard Treffers Dome Telescope.
+        </p>
+      </figcaption>
+    </figure>
 
-  <figure>
-    <img src="sunphoto.jpeg" alt="The Sun">
-    <figcaption>
-      <h3>The Sun</h3>
-      <p class="photo-credit">Photo Credit: Sage Remulla</p>
-      <p class="description">
-        This is a photo of the Sun. In this image we are able to see the Sun so clearly
-        because of a solar filter that we attached to our Newtonian telescope.
-        You can see sun spots!
-      </p>
-    </figcaption>
-  </figure>
+    <figure>
+      <img src="sunphoto.jpeg" alt="The Sun">
+      <figcaption>
+        <h3>The Sun</h3>
+        <p class="photo-credit">Photo Credit: Sage Remulla</p>
+        <p class="description">
+          This is a photo of the Sun. In this image we are able to see the Sun so clearly
+          because of a solar filter that we attached to our Newtonian telescope.
+          You can see sun spots!
+        </p>
+      </figcaption>
+    </figure>
 
-</div>
-
+  </div>
 
 </body>
 </html>
