@@ -18,20 +18,23 @@
     /* 🌌 Main Navbar */
     .navbar {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;  /* spreads links evenly */
   align-items: center;
-  gap: 60px;
+  flex-wrap: nowrap;              /* keeps everything on one row */
   margin-bottom: 30px;
-  padding-bottom: 15px;
-
-  flex-wrap: nowrap;      /* ✅ do NOT wrap to a second line */
-  white-space: nowrap;    /* ✅ keep link text on one line */
-  overflow-x: auto;       /* ✅ if screen is too small, allow scroll */
-  -webkit-overflow-scrolling: touch;
 }
 
 .navbar a {
-  flex: 0 0 auto;         /* ✅ prevents shrinking weirdly */
+  color: #FFD60A;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-size: 22px;
+  white-space: nowrap;
+}
+
+
+.navbar a {
+  white-space: nowrap;   /* prevents line breaks */
 }
 
 
