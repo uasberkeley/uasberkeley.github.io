@@ -20,25 +20,26 @@
 /* 🌌 Main Navbar */
 .navbar {
   display: flex;
-  justify-content: center;
-  gap: 60px;
+  justify-content: space-evenly;  /* spreads links evenly */
+  align-items: center;
+  flex-wrap: nowrap;              /* keeps everything on one row */
   margin-bottom: 30px;
-  padding-bottom: 15px;
-  flex-wrap: wrap;     /* ✅ allow wrapping on small screens */
-  row-gap: 14px;       /* ✅ space between rows when wrapped */
 }
 
-.navbar a,
-.navbar a:visited {
-  color: #FFD60A;          /* sunflower yellow */
+.navbar a {
+  color: #FFD60A;
   text-decoration: underline;
   text-underline-offset: 4px;
-  font-size: 20px;
-  transition: 0.3s ease;
+  font-size: 22px;
+  white-space: nowrap;
 }
+
 
 .navbar a:hover {
   text-shadow: 0 0 8px #FFD60A88;
+}
+.navbar a {
+  white-space: nowrap;   /* prevents line breaks */
 }
 
 .apply-link {
