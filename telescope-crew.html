@@ -18,26 +18,29 @@
   text-decoration: underline;
 }
 /* 🌌 Main Navbar */
+/* 🌌 Main Navbar — MATCH HOME PAGE */
 .navbar {
   display: flex;
-  justify-content: space-evenly;  /* spreads links evenly */
-  align-items: center;
-  flex-wrap: nowrap;              /* keeps everything on one row */
+  justify-content: center;
+  gap: 60px;              /* same spacing as home */
   margin-bottom: 30px;
+  padding-bottom: 10px;
 }
 
-.navbar a {
+.navbar a,
+.navbar a:visited {
+  font-family: 'Cinzel', serif;  /* match home */
+  font-size: 22px;               /* match home size */
   color: #FFD60A;
   text-decoration: underline;
   text-underline-offset: 4px;
-  font-size: 22px;
-  white-space: nowrap;
+  transition: 0.3s ease;
 }
-
 
 .navbar a:hover {
   text-shadow: 0 0 8px #FFD60A88;
 }
+
 .navbar a {
   white-space: nowrap;   /* prevents line breaks */
 }
