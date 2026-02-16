@@ -17,14 +17,23 @@
 
     /* 🌌 Main Navbar */
     .navbar {
-      display: flex;
-      justify-content: center;
-      gap: 60px;
-      margin-bottom: 30px;
-      padding-bottom: 15px;
-      flex-wrap: wrap;              /* ✅ allows wrapping */
-      row-gap: 14px;                /* ✅ spacing when it wraps */
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+
+  flex-wrap: nowrap;      /* ✅ do NOT wrap to a second line */
+  white-space: nowrap;    /* ✅ keep link text on one line */
+  overflow-x: auto;       /* ✅ if screen is too small, allow scroll */
+  -webkit-overflow-scrolling: touch;
+}
+
+.navbar a {
+  flex: 0 0 auto;         /* ✅ prevents shrinking weirdly */
+}
+
 
     .navbar a,
     .navbar a:visited {
