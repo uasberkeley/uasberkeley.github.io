@@ -14,22 +14,25 @@
       margin: 0;
       padding: 40px 20px;
     }
-    .navbar a,
-.navbar a:visited {
-  color: #FFD60A;
-  text-decoration: underline;
+    /* 🌌 Main Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;          /* same spacing as home */
+  margin-bottom: 30px;
+  padding-bottom: 15px;
 }
+
 .navbar a,
 .navbar a:visited {
   color: #FFD60A;
   text-decoration: underline;
+  text-underline-offset: 4px;
 }
-.navbar {
-  display: flex;
-  justify-content: center;
-  gap: 60px;   /* increase this number */
-  margin-bottom: 30px;
-  padding-bottom: 15px;
+
+.navbar a:hover {
+  text-shadow: 0 0 8px #FFD60A88;
 }
 
     h1 {
