@@ -76,29 +76,57 @@
       box-shadow: 0 0 30px #FFD60A55;
     }
 
-    .officer-top {
-      display: flex;
-      gap: 14px;
-      align-items: center;
-      margin-bottom: 14px;
-    }
+    .officer-card {
+  background-color: #001233;
+  padding: 24px 22px;
+  border-radius: 14px;
+  box-shadow: 0 0 20px #FFD60A22;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-align: center;
+}
 
-    .avatar {
-      width: 58px;
-      height: 58px;
-      border-radius: 50%;
-      border: 2px solid #FFD60A;
-      display: grid;
-      place-items: center;
-      font-size: 22px;
-      letter-spacing: 1px;
-      flex: 0 0 58px;
-      background: radial-gradient(circle at top, #001845 0%, #000814 70%);
-    }
+.officer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px #FFD60A55;
+}
 
-    .name-role {
-      line-height: 1.2;
-    }
+/* 📸 Officer Photo */
+.officer-photo {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  border: 2px solid #FFD60A;
+}
+
+/* Name + Role */
+.name {
+  font-size: 20px;
+  margin: 0;
+}
+
+.role {
+  font-size: 14px;
+  margin: 6px 0 12px;
+  opacity: 0.9;
+}
+
+.meta {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.35;
+  opacity: 0.92;
+  margin: 6px 0;
+}
+
+.bio {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  margin-top: 12px;
+  font-size: 13.5px;
+  line-height: 1.45;
+  opacity: 0.95;
+}
 
     .name {
       font-size: 18px;
@@ -179,17 +207,21 @@
 
     <!-- Komal -->
     <div class="officer-card">
-      <div class="officer-top">
-        <div class="avatar">K</div>
-        <div class="name-role">
-          <p class="name"><strong>Komal</strong></p>
-          <p class="role">Co-President</p>
-        </div>
-      </div>
-      <p class="meta"><strong>Graduating:</strong> Sp 2026</p>
-      <p class="meta"><strong>Major/Minor:</strong> Astrophysics + Computer Science</p>
-      <p class="bio">Super excited to serve UAS and build a community in astronomy!</p>
-    </div>
+
+  <!-- 📸 Add Photo File Here -->
+  <img src="komal.jpg" alt="Komal" class="officer-photo">
+
+  <p class="name"><strong>Komal</strong></p>
+  <p class="role">Co-President</p>
+
+  <p class="meta"><strong>Graduating:</strong> Sp 2026</p>
+  <p class="meta"><strong>Major/Minor:</strong> Astrophysics + Computer Science</p>
+
+  <p class="bio">
+    Super excited to serve UAS and build a community in astronomy!
+  </p>
+
+</div>
 
     <!-- Shrey -->
     <div class="officer-card">
