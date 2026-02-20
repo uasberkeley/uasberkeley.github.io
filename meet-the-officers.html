@@ -15,39 +15,33 @@
       padding: 40px 20px;
     }
 
- /* 🌌 Main Navbar */
-.navbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 35px;          /* same spacing as home */
-  margin-bottom: 30px;
-  padding-bottom: 15px;
-}
+    /* 🌌 Main Navbar */
+    .navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 35px;
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+      flex-wrap: wrap; /* helps if long links wrap nicely */
+    }
 
-.navbar a,
-.navbar a:visited {
-  color: #FFD60A;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
+    .navbar a,
+    .navbar a:visited {
+      color: #FFD60A;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
 
-.navbar a:hover {
-  text-shadow: 0 0 8px #FFD60A88;
-}
+    .navbar a:hover {
+      text-shadow: 0 0 8px #FFD60A88;
+    }
 
     h1 {
       font-size: 42px;
       letter-spacing: 1.5px;
       margin-bottom: 20px;
       text-shadow: 0 0 6px #FFD60A33;
-    }
-
-    .under-construction {
-      margin-top: 40px;
-      font-size: 22px;
-      letter-spacing: 1px;
-      opacity: 0.85;
     }
 
     .divider {
@@ -58,31 +52,113 @@
       opacity: 0.6;
     }
 
+    /* ⭐ Officers Grid */
+    .officers {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 32px;
+      max-width: 1100px;
+      margin: 40px auto 10px;
+      padding: 0 10px;
+    }
+
+    .officer-card {
+      background-color: #001233;
+      padding: 24px 22px;
+      border-radius: 14px;
+      box-shadow: 0 0 20px #FFD60A22;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      text-align: left;
+    }
+
+    .officer-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 30px #FFD60A55;
+    }
+
+    .officer-top {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .avatar {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      border: 2px solid #FFD60A;
+      display: grid;
+      place-items: center;
+      font-size: 22px;
+      letter-spacing: 1px;
+      flex: 0 0 58px;
+      background: radial-gradient(circle at top, #001845 0%, #000814 70%);
+    }
+
+    .name-role {
+      line-height: 1.2;
+    }
+
+    .name {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .role {
+      font-size: 14px;
+      margin: 6px 0 0;
+      opacity: 0.9;
+    }
+
+    .meta {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-size: 13px;
+      line-height: 1.35;
+      opacity: 0.92;
+      margin: 10px 0 0;
+    }
+
+    .meta strong {
+      color: #FFD60A;
+      font-weight: 700;
+    }
+
+    .bio {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      margin-top: 12px;
+      font-size: 13.5px;
+      line-height: 1.45;
+      opacity: 0.95;
+    }
+
+    .missing {
+      opacity: 0.7;
+      font-style: italic;
+    }
+
     /* 📱 Mobile adjustments */
     @media (max-width: 600px) {
-      body {
-        padding: 24px 16px;
-      }
+      body { padding: 24px 16px; }
 
-      .navbar {
-        gap: 18px;                 /* ✅ smaller spacing on phone */
-      }
+      .navbar { gap: 18px; }
 
       .navbar a,
       .navbar a:visited {
-        font-size: 16px;           /* ✅ smaller text on phone */
+        font-size: 16px;
       }
 
-      h1 {
-        font-size: 30px;
-      }
+      h1 { font-size: 30px; }
 
-      .under-construction {
-        font-size: 18px;
-      }
+      .divider { width: 140px; }
 
-      .divider {
-        width: 140px;
+      .officer-card { padding: 20px 18px; }
+
+      .avatar {
+        width: 52px;
+        height: 52px;
+        flex: 0 0 52px;
+        font-size: 20px;
       }
     }
   </style>
@@ -99,8 +175,204 @@
   <h1>Meet the Officers</h1>
   <div class="divider"></div>
 
-  <div class="under-construction">
-    Who keeps UAS going...? Find out soon ~~~
+  <div class="officers">
+
+    <!-- Komal -->
+    <div class="officer-card">
+      <div class="officer-top">
+        <div class="avatar">K</div>
+        <div class="name-role">
+          <p class="name"><strong>Komal</strong></p>
+          <p class="role">Co-President</p>
+        </div>
+      </div>
+      <p class="meta"><strong>Graduating:</strong> Sp 2026</p>
+      <p class="meta"><strong>Major/Minor:</strong> Astrophysics + Computer Science</p>
+      <p class="bio">Super excited to serve UAS and build a community in astronomy!</p>
+    </div>
+
+    <!-- Shrey -->
+    <div class="officer-card">
+      <div class="officer-top">
+        <div class="avatar">S</div>
+        <div class="name-role">
+          <p class="name"><strong>Shrey</strong></p>
+          <p class="role">Co-President</p>
+        </div>
+      </div>
+      <p class="meta"><strong>Graduating:</strong> Sp 2027</p>
+      <p class="meta"><strong>Major/Minor:</strong> Physics + Planetary Science + Geology minor</p>
+      <p class="bio">I’m excited to be one of UAS’s presidents this year! I love hiking, working out, sewing, and DJing. Talk to me about rocks and music!</p>
+    </div>
+
+    <!-- Alaina -->
+    <div class="officer-card">
+      <div class="officer-top">
+        <div class="avatar">A</div>
+        <div class="name-role">
+          <p class="name"><strong>Alaina</strong></p>
+          <p class="role">Community Development</p>
+        </div>
+      </div>
+      <p class="meta"><strong>Graduating:</strong> Spring 2027</p>
+      <p class="meta"><strong>Major/Minor:</strong> Physics and Astrophysics</p>
+      <p class="bio">Hi, welcome to UAS! As community development officer, I plan super fun events for the club to compete in with their clusters. When I’m not in class or at Campbell, I like reading, completing puzzles or games, and playing violin. Feel free to come chat with me about anything!</p>
+    </div>
+
+    <!-- Milana -->
+    <div class="officer-card">
+      <div class="officer-top">
+        <div class="avatar">M</div>
+        <div class="name-role">
+          <p class="name"><strong>Milana</strong></p>
+          <p class="role">Website Development</p>
+        </div>
+      </div>
+      <p class="meta"><strong>Graduating:</strong> Class of 2028</p>
+      <p class="meta"><strong>Major/Minor:</strong> Astrophysics + Political Science, Creative Writing minor</p>
+      <p class="bio">Hello! I’m the one who made this super awesome website :3 Aside from school and UAS (obviously), I enjoy writing poetry, screenplays, and short stories, hiking, journaling, and beautifying my bCal.</p>
+    </div>
+
+    <!-- Maya -->
+    <div class="officer-card">
+      <div class="officer-top">
+        <div class="avatar">M</div>
+        <div class="name-role">
+          <p class="name"><strong>Maya</strong></p>
+          <p class="role">Professional Development</p>
+        </div>
+      </div>
+      <p class="meta"><strong>Graduating:</strong> Class of 2026</p>
+      <p class="meta"><strong>Major/Minor:</strong> Astrophysics + Planetary Science</p>
+      <p class="bio">Hi I’m your professional development officer this year! Outside of class I love playing with lasers (re: holes in McCone), videogames, reading, and I work at an art studio. :D</p>
+    </div>
+
+    <!-- Alana (missing info placeholders) -->
+    <div class="officer-card">
+      <div class="officer-top">
+        <div class="avatar">A</div>
+        <div class="name-role">
+          <p class="name"><strong>Alana</strong></p>
+          <p class="role">Outreach</p>
+        </div>
+      </div>
+      <p class="meta"><strong>Graduating:</strong> <span class="missing">TBD</span></p>
+      <p class="meta"><strong>Major/Minor:</strong> <span class="missing">TBD</span></p>
+      <p class="bio missing">Bio coming soon!</p>
+    </div>
+
+    <!-- Thanael -->
+    <div class="officer-card">
+      <div class="officer-top">
+        <div class="avatar">T</div>
+        <div class="name-role">
+          <p class="name"><strong>Thanael</strong></p>
+          <p class="role">Treasurer</p>
+        </div>
+      </div>
+      <p class="meta"><strong>Graduating:</strong> Spring 2027</p>
+      <p class="meta"><strong>Major/Minor:</strong> Astrophysics</p>
+      <p class="bio">Hello! My name is Thanael and I’m your UAS Treasurer! Outside of school I love video games (Marvel Rivals right now), piano, kyokushin karate, writing, and basketball. I’m also a huge Star Wars and Lord of the Rings nerd and am always happy to talk about either!</p>
+    </div>
+
+    <!-- Ashley (missing info placeholders) -->
+    <div class="officer-card">
+      <div class="officer-top">
+        <div class="avatar">A</div>
+        <div class="name-role">
+          <p class="name"><strong>Ashley</strong></p>
+          <p class="role">Social Media</p>
+        </div>
+      </div>
+      <p class="meta"><strong>Graduating:</strong> <span class="missing">TBD</span></p>
+      <p class="meta"><strong>Major/Minor:</strong> <span class="missing">TBD</span></p>
+      <p class="bio missing">Bio coming soon!</p>
+    </div>
+
+    <!-- Andrew (missing info placeholders) -->
+    <div class="officer-card">
+      <div class="officer-top">
+        <div class="avatar">A</div>
+        <div class="name-role">
+          <p class="name"><strong>Andrew</strong></p>
+          <p class="role">Astrophotography</p>
+        </div>
+      </div>
+      <p class="meta"><strong>Graduating:</strong> <span class="missing">TBD</span></p>
+      <p class="meta"><strong>Major/Minor:</strong> <span class="missing">TBD</span></p>
+      <p class="bio missing">Bio coming soon!</p>
+    </div>
+
+    <!-- Riley -->
+    <div class="officer-card">
+      <div class="officer-top">
+        <div class="avatar">R</div>
+        <div class="name-role">
+          <p class="name"><strong>Riley</strong></p>
+          <p class="role">Head Telescope</p>
+        </div>
+      </div>
+      <p class="meta"><strong>Graduating:</strong> Spring 2027</p>
+      <p class="meta"><strong>Major/Minor:</strong> Astrophysics, History Minor</p>
+      <p class="bio">I organize the telescope things! Outside of UAS, I still love to do telescope things! I also lift weights, play video games, and spend too much time on the 5th floor of Campbell. Come talk to me about anything you’re interested in!</p>
+    </div>
+
+    <!-- Mariam (missing info placeholders) -->
+    <div class="officer-card">
+      <div class="officer-top">
+        <div class="avatar">M</div>
+        <div class="name-role">
+          <p class="name"><strong>Mariam</strong></p>
+          <p class="role">Telescope</p>
+        </div>
+      </div>
+      <p class="meta"><strong>Graduating:</strong> <span class="missing">TBD</span></p>
+      <p class="meta"><strong>Major/Minor:</strong> <span class="missing">TBD</span></p>
+      <p class="bio missing">Bio coming soon!</p>
+    </div>
+
+    <!-- Sage -->
+    <div class="officer-card">
+      <div class="officer-top">
+        <div class="avatar">S</div>
+        <div class="name-role">
+          <p class="name"><strong>Sage</strong></p>
+          <p class="role">Telescope</p>
+        </div>
+      </div>
+      <p class="meta"><strong>Graduating:</strong> Spring 2026</p>
+      <p class="meta"><strong>Major/Minor:</strong> Astrophysics and Physics</p>
+      <p class="bio">I am a telescope officer, which means I train telescope crew and help out during star parties and sidewalk astronomy. I love art, rogue-likes/lites, and playing basketball and volleyball. I am also one of the Omega Centauri Cluster Heads, so talk to me if you're interested in cosmology or being in our cluster!</p>
+    </div>
+
+    <!-- Shep -->
+    <div class="officer-card">
+      <div class="officer-top">
+        <div class="avatar">S</div>
+        <div class="name-role">
+          <p class="name"><strong>Shep</strong></p>
+          <p class="role">Telescope</p>
+        </div>
+      </div>
+      <p class="meta"><strong>Graduating:</strong> Spring 2027</p>
+      <p class="meta"><strong>Major/Minor:</strong> Astrophysics + Physics</p>
+      <p class="bio">Hi! I’m one of the telescope officers. Outside of astronomy, I’m a guitarist, a filmmaker, and a digital artist. I also love going to punk shows and creative writing :3</p>
+    </div>
+
+    <!-- Arianna -->
+    <div class="officer-card">
+      <div class="officer-top">
+        <div class="avatar">A</div>
+        <div class="name-role">
+          <p class="name"><strong>Arianna</strong></p>
+          <p class="role">Telescope</p>
+        </div>
+      </div>
+      <p class="meta"><strong>Graduating:</strong> Spring 2028</p>
+      <p class="meta"><strong>Major/Minor:</strong> Astrophysics and MechE minor</p>
+      <p class="bio">Hello! I’m one of the telescope officers. I enjoy listening to music, traveling, watching movies, and walking around campus at night (so many good hidden spots).</p>
+    </div>
+
   </div>
 </body>
 </html>
