@@ -6,239 +6,268 @@
   <title>Telescope Crew</title>
 
   <style>
-.apply-section {
-  margin-top: 40px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
+    /* 🌌 Main Navbar */
+    .navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 35px;
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+    }
 
-/* 🌌 Main Navbar */
-.navbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 35px;
-  margin-bottom: 30px;
-  padding-bottom: 15px;
-}
+    .navbar a,
+    .navbar a:visited {
+      color: #FFD60A;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
 
-.navbar a,
-.navbar a:visited {
-  color: #FFD60A;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
+    .navbar a:hover {
+      text-shadow: 0 0 8px #FFD60A88;
+    }
 
-.navbar a:hover {
-  text-shadow: 0 0 8px #FFD60A88;
-}
+    body {
+      background-color: #000814;
+      color: #FFD60A;
+      text-align: center;
+      font-family: 'Cinzel', serif;
+      margin: 0;
+      padding: 40px 20px;
+    }
 
-.apply-link {
-  color: #FFD60A;
-  font-size: 22px;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  display: inline-block;
-  line-height: 1.4;
-}
+    h1 {
+      font-size: 42px;
+      letter-spacing: 1.5px;
+      margin-bottom: 20px;
+      text-shadow: 0 0 6px #FFD60A33;
+    }
 
-.apply-link:hover {
-  text-shadow: 0 0 8px #FFD60A88;
-}
+    /* Optional subtle divider */
+    .divider {
+      width: 200px;
+      height: 1px;
+      background-color: #FFD60A;
+      margin: 30px auto;
+      opacity: 0.6;
+    }
 
-.apply-description {
-  margin-top: 20px;
-  font-size: 18px;
-  opacity: 0.9;
-}
+    /* About Section Layout (DESKTOP) */
+    .about-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
 
-body {
-  background-color: #000814;
-  color: #FFD60A;
-  text-align: center;
-  font-family: 'Cinzel', serif;
-  margin: 0;
-  padding: 40px 20px;
-}
+    .about-text {
+      flex: 1;
+      text-align: left;
+    }
 
-h1 {
-  font-size: 42px;
-  letter-spacing: 1.5px;
-  margin-bottom: 20px;
-  text-shadow: 0 0 6px #FFD60A33;
-}
+    .about-image {
+      flex: 0 0 auto;
+    }
 
-.divider {
-  width: 200px;
-  height: 1px;
-  background-color: #FFD60A;
-  margin: 30px auto;
-  opacity: 0.6;
-}
+    .about-image img {
+      width: 350px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #FFD60A55;
+      display: block;
+    }
 
-/* About Section Layout */
-.about-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 40px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
+    /* ✅ APPLY + IMAGES SIDE-BY-SIDE */
+    .apply-section {
+      margin-top: 50px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-.about-text {
-  flex: 1;
-  text-align: left;
-}
+    .apply-flex {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 40px;
+    }
 
-.about-image {
-  flex: 0 0 auto;
-}
+    /* ✅ Uncenter Treffery text */
+    .apply-text {
+      flex: 1;
+      text-align: left;
+    }
 
-.about-image img {
-  width: 350px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 15px #FFD60A55;
-  display: block;
-}
+    .apply-link {
+      color: #FFD60A;
+      font-size: 22px;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      display: inline-block;
+      line-height: 1.4;
+    }
 
-/* ⭐ NEW Sidewalk Image Section */
-.sidewalk-gallery {
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
+    .apply-link:hover {
+      text-shadow: 0 0 8px #FFD60A88;
+    }
 
-.sidewalk-gallery img {
-  width: 320px;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 0 18px #FFD60A66;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    .apply-description {
+      margin-top: 20px;
+      font-size: 18px;
+      opacity: 0.9;
+    }
 
-.sidewalk-gallery img:hover {
-  transform: scale(1.04);
-  box-shadow: 0 0 25px #FFD60Acc;
-}
+    /* ✅ Images on the right (no stretching) */
+    .sidewalk-gallery {
+      flex: 0 0 420px;           /* right column width */
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      align-items: center;
+    }
 
-/* 📱 Mobile */
-@media (max-width: 800px) {
-  .about-container {
-    flex-direction: column;
-    align-items: center;
-  }
+    .sidewalk-gallery img {
+      width: 100%;
+      height: auto;              /* 🔥 prevents stretching */
+      border-radius: 12px;
+      box-shadow: 0 0 18px #FFD60A66;
+      display: block;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-  .about-text {
-    text-align: center;
-  }
+    .sidewalk-gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 25px #FFD60Acc;
+    }
 
-  .about-image img {
-    width: 100%;
-    max-width: 320px;
-    margin-top: 18px;
-  }
-}
+    /* Mobile: stack text + images */
+    @media (max-width: 900px) {
+      .apply-flex {
+        flex-direction: column;
+        align-items: center;
+      }
 
-@media (max-width: 600px) {
-  body {
-    padding: 24px 16px;
-  }
+      .apply-text {
+        text-align: center; /* nicer on small screens */
+      }
 
-  .navbar {
-    gap: 18px;
-  }
+      .sidewalk-gallery {
+        width: 100%;
+        max-width: 420px;
+      }
+    }
 
-  .navbar a {
-    font-size: 16px;
-  }
+    /* Mobile: stack About section */
+    @media (max-width: 800px) {
+      .about-container {
+        flex-direction: column;
+        align-items: center;
+      }
 
-  h1 {
-    font-size: 30px;
-  }
+      .about-text {
+        text-align: center;
+      }
 
-  .divider {
-    width: 140px;
-  }
+      .about-image img {
+        width: 100%;
+        max-width: 320px;
+        margin-top: 18px;
+      }
+    }
 
-  .apply-link {
-    font-size: 18px;
-  }
+    /* Small-screen tweaks */
+    @media (max-width: 600px) {
+      body {
+        padding: 24px 16px;
+      }
 
-  .apply-description {
-    font-size: 16px;
-  }
+      .navbar {
+        gap: 18px;
+      }
 
-  .sidewalk-gallery img {
-    width: 100%;
-    max-width: 340px;
-  }
-}
+      .navbar a {
+        font-size: 16px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .divider {
+        width: 140px;
+      }
+
+      .apply-link {
+        font-size: 18px;
+      }
+
+      .apply-description {
+        font-size: 16px;
+      }
+    }
   </style>
 </head>
 
 <body>
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="telescope-crew.html">Telescope Crew</a>
+    <a href="cluster-mentorship-program.html">Cluster Mentorship Program</a>
+    <a href="meet-the-officers.html">Meet the Officers</a>
+  </nav>
 
-<nav class="navbar">
-  <a href="index.html">Home</a>
-  <a href="telescope-crew.html">Telescope Crew</a>
-  <a href="cluster-mentorship-program.html">Cluster Mentorship Program</a>
-  <a href="meet-the-officers.html">Meet the Officers</a>
-</nav>
+  <h1>Telescope Crew</h1>
+  <div class="divider"></div>
 
-<h1>Telescope Crew</h1>
+  <section class="telescope-info">
+    <div class="about-container">
+      <div class="about-text">
+        <h2>About Telescope Crew</h2>
 
-<div class="divider"></div>
+        <p>
+          You can join Telescope Crew at the start of every school year. In the fall,
+          we will train Telescope Crew members on the Schmidt-Cassegrain and Newtonian telescopes.
+        </p>
 
-<section class="telescope-info">
-  <div class="about-container">
+        <p>
+          In the spring, we begin Sidewalk Astronomy, where we bring the Newtonian telescopes
+          to Sproul Plaza and teach the local community about astronomy, allowing them to
+          stargaze and look through the telescopes.
+        </p>
 
-    <div class="about-text">
-      <h2>About Telescope Crew</h2>
+        <p>
+          Spring is also when training for the Richard Treffers dome telescope will occur
+          (by application only).
+        </p>
+      </div>
 
-      <p>
-        You can join Telescope Crew at the start of every school year. In the fall, 
-        we will train Telescope Crew members on the Schmidt-Cassegrain and Newtonian telescopes.
-      </p>
-
-      <p>
-        In the spring, we begin Sidewalk Astronomy, where we bring the Newtonian telescopes 
-        to Sproul Plaza and teach the local community about astronomy, allowing them to 
-        stargaze and look through the telescopes.
-      </p>
-
-      <p>
-        Spring is also when training for the Richard Treffers dome telescope will occur 
-        (by application only).
-      </p>
+      <div class="about-image">
+        <img src="sidewalkastro.jpg" alt="Telescope Crew">
+      </div>
     </div>
+  </section>
 
-    <div class="about-image">
-      <img src="lanathanael.jpeg" alt="Telescope Crew">
+  <!-- ✅ Apply text (left) + images (right) -->
+  <div class="apply-section">
+    <div class="apply-flex">
+      <div class="apply-text">
+        <a href="https://forms.gle/cC9BDSCG9DcLEkxA6" target="_blank" class="apply-link">
+          Apply to be trained on the Astronomy Department's dome telescope, Treffers, by February 27, 2026!
+        </a>
+
+        <p class="apply-description">
+          Come to Sidewalk Astronomy and star parties to raise your chances of being accepted.
+        </p>
+      </div>
+
+      <div class="sidewalk-gallery">
+        <img src="lanathanael.jpeg" alt="Sidewalk Astronomy Event">
+        <img src="sidewalkheart.jpg" alt="Sidewalk Astronomy Community Moment">
+      </div>
     </div>
-
   </div>
-</section>
-
-<div class="apply-section">
-  <a href="https://forms.gle/cC9BDSCG9DcLEkxA6" target="_blank" class="apply-link">
-    Apply to be trained on the Astronomy Department's dome telescope, Treffers, by February 27, 2026!
-  </a>
-
-  <p class="apply-description">
-    Come to Sidewalk Astronomy and star parties to raise your chances of being accepted.
-  </p>
-</div>
-
-<!-- ⭐ NEW IMAGE SECTION -->
-<div class="sidewalk-gallery">
-  <img src="sidewalkastro.jpg" alt="Sidewalk Astronomy Event">
-  <img src="sidewalkheart.jpg" alt="Sidewalk Astronomy Community Moment">
-</div>
 
 </body>
 </html>
