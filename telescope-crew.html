@@ -82,17 +82,25 @@
     }
 
     .apply-flex {
-      display: flex;
-      align-items: flex-start;
-      gap: 60px;
-    }
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+}
 
-    /* Images LEFT (side-by-side) */
-    .sidewalk-gallery {
-      flex: 0 0 600px;
-      display: flex;
-      gap: 25px;
-    }
+/* ⭐ Prevent compression */
+.sidewalk-gallery {
+  display: flex;
+  gap: 25px;
+  flex-shrink: 0;        /* 🔥 prevents compression */
+}
+
+.sidewalk-gallery img {
+  width: 260px;          /* slightly smaller */
+  height: auto;          /* prevents stretching */
+  border-radius: 14px;
+  box-shadow: 0 0 20px #FFD60A66;
+  object-fit: cover;
+}
 
     .sidewalk-gallery img {
       width: 100%;
