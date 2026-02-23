@@ -84,6 +84,95 @@
       margin: 30px auto;
       opacity: 0.6;
     }
+
+  /* About Section Layout (DESKTOP) */
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-text {
+  flex: 1;
+  text-align: left;   /* decenter text */
+}
+
+.about-image {
+  flex: 0 0 auto;
+}
+
+.about-image img {
+  width: 220px;       /* adjust smaller/bigger */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #FFD60A55;
+  display: block;
+}
+
+/* Mobile: stack text + image */
+@media (max-width: 800px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 100%;
+    max-width: 320px;
+    margin-top: 18px;
+  }
+}
+
+/* Your existing small-screen tweaks */
+@media (max-width: 600px) {
+  body {
+    padding: 24px 16px;
+  }
+
+  .navbar {
+    gap: 18px;
+  }
+
+  .navbar a {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .divider {
+    width: 140px;
+  }
+
+  .telescope-info {
+    padding: 0 6px;
+  }
+
+  .telescope-info h2 {
+    font-size: 22px;
+  }
+
+  .telescope-info p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .apply-link {
+    font-size: 18px;
+  }
+
+  .apply-description {
+    font-size: 16px;
+  }
+}
 /* 📱 Mobile adjustments */
 @media (max-width: 600px) {
   body {
@@ -153,19 +242,6 @@
   height: auto;
   border-radius: 10px;
   box-shadow: 0 0 15px #FFD60A55;
-}
-/* Mobile responsiveness */
-@media (max-width: 800px) {
-  .about-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-image img {
-    width: 100%;
-    max-width: 350px;
-    margin: 20px auto 0;
-  }
 }
   </style>
 </head>
