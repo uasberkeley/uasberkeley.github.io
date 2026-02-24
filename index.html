@@ -6,7 +6,6 @@
 <title>Undergraduate Astronomy Society</title>
 
 <style>
-
 /* 🌌 Base Styling */
 body {
   background-color: #000814;
@@ -61,39 +60,27 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 15px;               /* Reduced from 60px */
+  gap: 25px;
   margin-top: 40px;
 }
 
-/* 📸 Image Row */
+/* 📸 Image Row (FORCED SINGLE ROW) */
 .image-row {
   display: flex;
-  gap: 8px;              /* smaller gap */
+  gap: 12px;              /* spacing between images */
   align-items: flex-start;
-  flex-wrap: wrap;       /* prevents overflow */
-  justify-content: center;
+  flex-wrap: nowrap;      /* 🔥 prevents wrapping */
 }
 
-.image-row figure {
-  margin: 0;             /* remove default spacing */
-}
-
-.image-row img {
-  width: 220px;          /* smaller than 250px */
-  height: 250px;
-  object-fit: cover;
-  border-radius: 12px;
-  border: 2px solid #FFD60A;
-}
-/* Remove default figure spacing */
 .image-row figure {
   margin: 0;
+  text-align: center;
 }
 
-/* Slightly smaller images */
+/* Slightly smaller images so they fit */
 .image-row img {
-  width: 250px;            /* Reduced from 300px */
-  height: 260px;
+  width: 220px;
+  height: 250px;
   object-fit: cover;
   border-radius: 12px;
   border: 2px solid #FFD60A;
@@ -101,6 +88,7 @@ h2 {
 
 figcaption {
   margin-top: 12px;
+  max-width: 220px; /* keeps captions aligned with image width */
 }
 
 figcaption h3 {
@@ -119,10 +107,10 @@ figcaption h3 {
   font-size: 14px;
 }
 
-/* 📅 Schedule (Wider Now) */
+/* 📅 Schedule */
 .schedule-section {
-  flex: 1;                 
-  max-width: 480px;        /* Increased from 350px */
+  flex: 1;
+  max-width: 480px;
   min-width: 360px;
   text-align: left;
 }
@@ -187,15 +175,21 @@ figcaption h3 {
     gap: 40px;
   }
 
+  /* stack images on mobile */
   .image-row {
     flex-direction: column;
     align-items: center;
+    flex-wrap: nowrap;
     gap: 30px;
   }
 
   .image-row img {
     width: 90%;
     height: auto;
+  }
+
+  figcaption {
+    max-width: 90%;
   }
 
   .schedule-section {
@@ -208,7 +202,6 @@ figcaption h3 {
     text-align: center;
   }
 }
-
 </style>
 </head>
 
@@ -268,6 +261,7 @@ figcaption h3 {
     <h2>Spring 2026 Schedule</h2>
 
     <div class="schedule-container">
+
       <div class="schedule-item">
         <span class="date">(<em>Upcoming</em>) February 26:</span>
         Lighting Talks in collaboration with Society of Physics Students
@@ -292,6 +286,7 @@ figcaption h3 {
         <span class="date">January 29:</span>
         Spring 2026 Infosession
       </div>
+
     </div>
   </section>
 
@@ -301,15 +296,9 @@ figcaption h3 {
   <h2>Links</h2>
 
   <div class="links-container">
-    <a href="https://discord.com/invite/gVuuTzc9Cj" target="_blank">
-      Join the Discord
-    </a>
-    <a href="https://www.instagram.com/uasberkeley/" target="_blank">
-      Follow our Instagram: @uasberkeley
-    </a>
-    <a href="https://forms.gle/HSMZXSLrxHTf5Sko8" target="_blank">
-      Join the Cluster Mentorship Program
-    </a>
+    <a href="https://discord.com/invite/gVuuTzc9Cj" target="_blank">Join the Discord</a>
+    <a href="https://www.instagram.com/uasberkeley/" target="_blank">Follow our Instagram: @uasberkeley</a>
+    <a href="https://forms.gle/HSMZXSLrxHTf5Sko8" target="_blank">Join the Cluster Mentorship Program</a>
   </div>
 </footer>
 
