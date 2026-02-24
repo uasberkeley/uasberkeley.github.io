@@ -14,6 +14,7 @@
       margin: 0;
       padding: 40px 20px;
     }
+    * { box-sizing: border-box; }
 
     /* 🌟 NAVIGATION BUTTONS (MATCHES HOMEPAGE) */
     .navbar {
@@ -125,18 +126,23 @@
     }
 
     /* 📱 Mobile adjustments */
-    @media (max-width: 600px) {
-      body { padding: 24px 16px; }
-      h1 { font-size: 30px; }
-      .divider { width: 140px; }
-      .officer-card { padding: 20px 18px; }
+    @media (max-width: 768px) {
+  body { padding: 24px 16px; }
 
-      .navbar { gap: 12px; }
-      .navbar a {
-        font-size: 14px;
-        padding: 8px 14px;
-      }
-    }
+  .navbar { gap: 12px; }
+  .navbar a {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+
+  h1 { font-size: 30px; }
+  .divider { width: 140px; }
+.officers {
+  grid-template-columns: 1fr;
+  max-width: 520px;
+}
+  .officer-card { padding: 20px 18px; }
+}
   </style>
 </head>
 
