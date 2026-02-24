@@ -1,84 +1,100 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cluster Mentorship Program</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cluster Mentorship Program</title>
 
-  <style>
-    body {
-      background-color: #000814;
-      color: #FFD60A;
-      text-align: center;
-      font-family: 'Cinzel', serif;
-      margin: 0;
-      padding: 40px 20px;
-    }
-    /* 🌌 Main Navbar */
+<style>
+
+/* 🌌 Base Styling */
+:root{
+  --bg: #000814;
+  --gold: #FFD60A;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--gold);
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  margin: 0;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 42px;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 6px rgba(255,214,10,.2);
+}
+
+/* 🌟 GOLD BUTTON NAVBAR */
 .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 35px;          /* same spacing as home */
-  margin-bottom: 30px;
-  padding-bottom: 15px;
+  gap: 18px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
 }
 
-.navbar a,
-.navbar a:visited {
-  color: #FFD60A;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+.navbar a {
+  text-decoration: none;
+  color: var(--bg);
+  background: linear-gradient(180deg, #FFE889 0%, var(--gold) 60%, #F1C400 100%);
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  border: 1px solid rgba(255,214,10,.55);
+  box-shadow: 0 8px 18px rgba(0,0,0,.35);
+  transition: all .25s ease;
 }
 
 .navbar a:hover {
-  text-shadow: 0 0 8px #FFD60A88;
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 18px rgba(255,214,10,.35),
+    0 0 40px rgba(255,214,10,.18),
+    0 10px 20px rgba(0,0,0,.35);
 }
 
-    h1 {
-      font-size: 42px;
-      letter-spacing: 1.5px;
-      margin-bottom: 20px;
-      text-shadow: 0 0 6px #FFD60A33;
-    }
-
-    .divider {
-      width: 240px;
-      height: 1px;
-      background-color: #FFD60A;
-      margin: 30px auto;
-      opacity: 0.6;
-    }
-
-    .under-construction {
-      margin-top: 40px;
-      font-size: 22px;
-      letter-spacing: 1px;
-      opacity: 0.85;
-    }
-    .cluster-navbar {
+/* 🌌 Cluster Sub-Navbar */
+.cluster-navbar {
   display: flex;
   justify-content: center;
-  gap: 35px;
+  gap: 40px;
   margin-top: 25px;
   margin-bottom: 40px;
+  flex-wrap: wrap;
 }
 
-.cluster-navbar a,
-.cluster-navbar a:visited {
-  color: #FFD60A;
+.cluster-navbar a {
+  color: var(--gold);
   text-decoration: underline;
   text-underline-offset: 4px;
+  font-size: 18px;
+  transition: .3s ease;
 }
 
 .cluster-navbar a:hover {
-  text-shadow: 0 0 8px #FFD60A88;
+  text-shadow: 0 0 8px rgba(255,214,10,.6);
 }
+
+/* Divider */
+.divider {
+  width: 240px;
+  height: 1px;
+  background-color: var(--gold);
+  margin: 30px auto;
+  opacity: 0.6;
+}
+
+/* Content Section */
 .cluster-section {
   max-width: 900px;
-  margin: 0 auto;
-  margin-top: 40px;
-  text-align: center;
+  margin: 40px auto 0 auto;
 }
 
 .cluster-section h2 {
@@ -94,42 +110,13 @@
   margin-bottom: 20px;
 }
 
-.cluster-section a,
-.cluster-section a:visited {
-  color: #FFD60A;
+.cluster-section a {
+  color: var(--gold);
   text-decoration: underline;
 }
 
 .cluster-section a:hover {
-  text-shadow: 0 0 8px #FFD60A88;
-}
-
-.rankings {
-  margin-top: 20px;
-  font-size: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-/* 🌌 Cluster Navbar */
-.cluster-navbar {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  margin-top: 25px;
-  margin-bottom: 40px;
-}
-
-.cluster-navbar a,
-.cluster-navbar a:visited {
-  color: #FFD60A;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  font-size: 18px;
-}
-
-.cluster-navbar a:hover {
-  text-shadow: 0 0 8px #FFD60A88;
+  text-shadow: 0 0 8px rgba(255,214,10,.6);
 }
 
 /* 🏆 Rankings */
@@ -144,81 +131,77 @@
 /* Highlight leader */
 .leader {
   font-weight: bold;
-  text-shadow: 0 0 10px #FFD60A66;
+  text-shadow: 0 0 10px rgba(255,214,10,.4);
   animation: glow 2.5s ease-in-out infinite alternate;
 }
 
 /* ✨ Subtle glow animation */
 @keyframes glow {
-  from {
-    text-shadow: 0 0 6px #FFD60A55;
-  }
-  to {
-    text-shadow: 0 0 18px #FFD60A99;
-  }
+  from { text-shadow: 0 0 6px rgba(255,214,10,.4); }
+  to   { text-shadow: 0 0 18px rgba(255,214,10,.8); }
 }
 
-  </style>
+/* 📱 Mobile */
+@media (max-width: 768px) {
+  h1 { font-size: 28px; }
+  .cluster-navbar { gap: 20px; }
+}
+
+</style>
 </head>
 
 <body>
-<body>
 
-  <nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="telescope-crew.html">Telescope Crew</a>
-    <a href="cluster-mentorship-program.html">Cluster Mentorship Program</a>
-    <a href="meet-the-officers.html">Meet the Officers</a>
-  </nav>
+<nav class="navbar">
+  <a href="index.html">Home</a>
+  <a href="telescope-crew.html">Telescope Crew</a>
+  <a href="cluster-mentorship-program.html">Cluster Mentorship Program</a>
+  <a href="meet-the-officers.html">Meet the Officers</a>
+</nav>
 
-  <h1>Cluster Mentorship Program</h1>
-  <nav class="cluster-navbar">
-    <a href="hercules.html">Hercules - Instrumentation</a>
-    <a href="hyades.html">Hyades - Stellar</a>
-    <a href="omega-centauri.html">Omega Centauri - Cosmology</a>
-    <a href="pleiades.html">Pleiades - Planetary</a>
-  </nav>
+<h1>Cluster Mentorship Program</h1>
 
-  <div class="divider"></div>
+<nav class="cluster-navbar">
+  <a href="hercules.html">Hercules - Instrumentation</a>
+  <a href="hyades.html">Hyades - Stellar</a>
+  <a href="omega-centauri.html">Omega Centauri - Cosmology</a>
+  <a href="pleiades.html">Pleiades - Planetary</a>
+</nav>
 
-  <section class="cluster-section">
+<div class="divider"></div>
 
-    <h2>What is the Cluster Mentorship Program?</h2>
+<section class="cluster-section">
 
-    <p>
-      The Cluster Mentorship Program is designed to help cluster members gain knowledge 
-      from cluster leaders in the fields of their choice. You can submit a 
-      <a href="https://forms.gle/HSMZXSLrxHTf5Sko8" target="_blank">
-        Cluster Interest Form
-      </a> 
-      and email Alaina Tripp (alainatripp@berkeley.edu) to be added to a cluster. Every cluster meets around 
-      twice a month for activities, presentations, and other programming.
-    </p>
+  <h2>What is the Cluster Mentorship Program?</h2>
 
-    <h2>Cluster Competition</h2>
+  <p>
+    The Cluster Mentorship Program is designed to help cluster members gain knowledge 
+    from cluster leaders in the fields of their choice. You can submit a 
+    <a href="https://forms.gle/HSMZXSLrxHTf5Sko8" target="_blank">
+      Cluster Interest Form
+    </a> 
+    and email Alaina Tripp (alainatripp@berkeley.edu) to be added to a cluster. 
+    Every cluster meets around twice a month for activities, presentations, and other programming.
+  </p>
 
-    <p>
-      Each semester, clusters compete in the Cluster Competition, where the winning 
-      cluster earns a prize. Points can be earned by attending club and 
-      cluster meetings, participating in cluster games, and academic marathons.
-    </p>
+  <h2>Cluster Competition</h2>
 
-    <h2>Current Cluster Rankings</h2>
+  <p>
+    Each semester, clusters compete in the Cluster Competition, where the winning 
+    cluster earns a prize. Points can be earned by attending club and 
+    cluster meetings, participating in cluster games, and academic marathons.
+  </p>
 
-<div class="rankings">
-  <div class="leader">
-    🏆 Pleiades: 2000
+  <h2>Current Cluster Rankings</h2>
+
+  <div class="rankings">
+    <div class="leader">🏆 Pleiades: 2000</div>
+    <div>Omega Centauri: 1860</div>
+    <div>Hyades: 1850</div>
+    <div>Hercules: 1600</div>
   </div>
-  <div>Omega Centauri: 1860</div>
-  <div>Hyades: 1850</div>
-  <div>Hercules: 1600</div>
-</div>
 
-
-  </section>
-
-</body>
-
+</section>
 
 </body>
 </html>
