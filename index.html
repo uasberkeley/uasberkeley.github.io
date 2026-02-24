@@ -68,11 +68,23 @@ h2 {
 /* 📸 Image Row */
 .image-row {
   display: flex;
-  gap: 1px;               /* Photos closer together */
+  gap: 8px;              /* smaller gap */
   align-items: flex-start;
-  flex: 0 0 auto;
+  flex-wrap: wrap;       /* prevents overflow */
+  justify-content: center;
 }
 
+.image-row figure {
+  margin: 0;             /* remove default spacing */
+}
+
+.image-row img {
+  width: 220px;          /* smaller than 250px */
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #FFD60A;
+}
 /* Remove default figure spacing */
 .image-row figure {
   margin: 0;
