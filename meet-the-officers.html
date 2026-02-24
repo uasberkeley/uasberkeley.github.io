@@ -16,26 +16,36 @@
     }
 
     /* 🌌 Main Navbar */
-    .navbar {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 35px;
-      margin-bottom: 30px;
-      padding-bottom: 15px;
-      flex-wrap: wrap; /* helps if long links wrap nicely */
-    }
+    /* 🌟 GOLD BUTTON NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
 
-    .navbar a,
-    .navbar a:visited {
-      color: #FFD60A;
-      text-decoration: underline;
-      text-underline-offset: 4px;
-    }
+.navbar a {
+  text-decoration: none;
+  color: #000814;
+  background: linear-gradient(180deg, #FFE889 0%, #FFD60A 60%, #F1C400 100%);
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  border: 1px solid rgba(255,214,10,.55);
+  box-shadow: 0 8px 18px rgba(0,0,0,.35);
+  transition: all .25s ease;
+}
 
-    .navbar a:hover {
-      text-shadow: 0 0 8px #FFD60A88;
-    }
+.navbar a:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 18px rgba(255,214,10,.35),
+    0 0 40px rgba(255,214,10,.18),
+    0 10px 20px rgba(0,0,0,.35);
+}
 
     h1 {
       font-size: 42px;
@@ -169,13 +179,14 @@
     @media (max-width: 600px) {
       body { padding: 24px 16px; }
 
-      .navbar { gap: 18px; }
+      .navbar {
+  gap: 12px;
+}
 
-      .navbar a,
-      .navbar a:visited {
-        font-size: 16px;
-      }
-
+.navbar a {
+  font-size: 14px;
+  padding: 8px 14px;
+}
       h1 { font-size: 30px; }
 
       .divider { width: 140px; }
