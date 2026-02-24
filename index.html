@@ -61,18 +61,26 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 60px;
+  gap: 35px;               /* Reduced from 60px */
   margin-top: 40px;
 }
 
 /* 📸 Image Row */
 .image-row {
   display: flex;
-  gap: 1px;
+  gap: 10px;               /* Photos closer together */
+  align-items: flex-start;
+  flex: 0 0 auto;
 }
 
+/* Remove default figure spacing */
+.image-row figure {
+  margin: 0;
+}
+
+/* Slightly smaller images */
 .image-row img {
-  width: 300px;
+  width: 250px;            /* Reduced from 300px */
   height: 260px;
   object-fit: cover;
   border-radius: 12px;
@@ -99,14 +107,16 @@ figcaption h3 {
   font-size: 14px;
 }
 
-/* 📅 Schedule */
+/* 📅 Schedule (Wider Now) */
 .schedule-section {
-  max-width: 350px;
+  flex: 1;                 
+  max-width: 480px;        /* Increased from 350px */
+  min-width: 360px;
   text-align: left;
 }
 
 .schedule-section h2 {
-  font-size: 24px;
+  font-size: 26px;
   margin-bottom: 20px;
   text-align: left;
 }
@@ -114,12 +124,12 @@ figcaption h3 {
 .schedule-container {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .schedule-item {
-  font-size: 18px;
-  line-height: 1.4;
+  font-size: 19px;
+  line-height: 1.5;
 }
 
 .schedule-item .date {
@@ -157,15 +167,7 @@ figcaption h3 {
 }
 
 /* 📱 Mobile */
-@media (max-width: 768px) {
-
-  h1 {
-    font-size: 28px;
-  }
-
-  h2 {
-    font-size: 16px;
-  }
+@media (max-width: 900px) {
 
   .main-content {
     flex-direction: column;
@@ -187,6 +189,7 @@ figcaption h3 {
   .schedule-section {
     text-align: center;
     max-width: 95%;
+    min-width: unset;
   }
 
   .schedule-section h2 {
@@ -253,7 +256,6 @@ figcaption h3 {
     <h2>Spring 2026 Schedule</h2>
 
     <div class="schedule-container">
-
       <div class="schedule-item">
         <span class="date">(<em>Upcoming</em>) February 26:</span>
         Lighting Talks in collaboration with Society of Physics Students
@@ -278,7 +280,6 @@ figcaption h3 {
         <span class="date">January 29:</span>
         Spring 2026 Infosession
       </div>
-
     </div>
   </section>
 
