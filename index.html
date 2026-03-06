@@ -25,7 +25,35 @@ h1 {
 
 h2 {
   font-weight: normal;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+}
+
+/* ⭐ Academic Marathon Banner */
+.marathon-banner {
+  max-width: 900px;
+  margin: 25px auto 50px auto;
+  padding: 18px 22px;
+  background-color: #001233;
+  border: 2px solid #FFD60A;
+  border-radius: 12px;
+  box-shadow: 0 0 18px #FFD60A33;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.marathon-banner strong {
+  font-size: 20px;
+}
+
+.marathon-banner a {
+  color: #FFD60A;
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.marathon-banner a:hover {
+  text-shadow: 0 0 8px #FFD60A88;
 }
 
 /* 🌟 NAVIGATION BUTTONS */
@@ -61,15 +89,15 @@ h2 {
   justify-content: center;
   align-items: flex-start;
   gap: 25px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
-/* 📸 Image Row (FORCED SINGLE ROW) */
+/* 📸 Image Row */
 .image-row {
   display: flex;
-  gap: 12px;              /* spacing between images */
+  gap: 12px;
   align-items: flex-start;
-  flex-wrap: nowrap;      /* 🔥 prevents wrapping */
+  flex-wrap: nowrap;
 }
 
 .image-row figure {
@@ -77,7 +105,6 @@ h2 {
   text-align: center;
 }
 
-/* Slightly smaller images so they fit */
 .image-row img {
   width: 220px;
   height: 250px;
@@ -88,7 +115,7 @@ h2 {
 
 figcaption {
   margin-top: 12px;
-  max-width: 220px; /* keeps captions aligned with image width */
+  max-width: 220px;
 }
 
 figcaption h3 {
@@ -168,18 +195,15 @@ figcaption h3 {
 
 /* 📱 Mobile */
 @media (max-width: 900px) {
-
   .main-content {
     flex-direction: column;
     align-items: center;
     gap: 40px;
   }
 
-  /* stack images on mobile */
   .image-row {
     flex-direction: column;
     align-items: center;
-    flex-wrap: nowrap;
     gap: 30px;
   }
 
@@ -216,6 +240,11 @@ figcaption h3 {
 
 <h1>Undergraduate Astronomy Society at UC Berkeley</h1>
 <h2>. ܁ ₊ ⊹ . ܁ ✮⋆˙⟡ ܁ * . ⊹⋆ ｡ 𖦹 .° ⭒˚ . * ｡⋆ ✮⋆˙ ₊ ܁. ݁₊ ⊹ ⋆｡˚｡⋆. ݁˖ . . ݁</h2>
+
+<div class="marathon-banner">
+  <strong>📚 Academic Marathon is happening now!</strong><br><br>
+  Fill out <a href="https://forms.gle/HSMZXSLrxHTf5Sko8" target="_blank">this form</a> every time you complete an assignment, quiz, midterm, or exam to earn points for your cluster in the competition.
+</div>
 
 <div class="main-content">
 
@@ -261,12 +290,11 @@ figcaption h3 {
     <h2>Spring 2026 Schedule</h2>
 
     <div class="schedule-container">
-
       <div class="schedule-item">
         <span class="date">(<em>Upcoming</em>) March 5:</span>
         Academic Marathon Kickoff (cluster competition!)
       </div>
-      
+
       <div class="schedule-item">
         <span class="date">February 26:</span>
         Lighting Talks in collaboration with Society of Physics Students
@@ -291,7 +319,6 @@ figcaption h3 {
         <span class="date">January 29:</span>
         Spring 2026 Infosession
       </div>
-
     </div>
   </section>
 
