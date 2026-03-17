@@ -9,27 +9,172 @@
     body {
       background-color: #000814;
       color: #FFD60A;
-      text-align: center;
       font-family: 'Cinzel', serif;
       margin: 0;
-      padding: 40px 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      padding: 40px 20px 80px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
     }
 
     h1 {
       font-size: 48px;
       letter-spacing: 2px;
       text-shadow: 0 0 8px #FFD60A44;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-top: 60px;
+      margin-bottom: 25px;
+      text-shadow: 0 0 6px #FFD60A33;
+    }
+
+    .intro {
+      font-size: 18px;
+      max-width: 850px;
+      margin: 0 auto 30px;
+      line-height: 1.7;
+      color: #ffe88a;
+    }
+
+    .mentor-grid,
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 25px;
+    }
+
+    .mentor-card,
+    .resource-card {
+      background: rgba(255, 214, 10, 0.06);
+      border: 1px solid rgba(255, 214, 10, 0.35);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 0 18px rgba(255, 214, 10, 0.08);
+      text-align: left;
+    }
+
+    .mentor-card h3,
+    .resource-card h3 {
+      margin-top: 0;
+      margin-bottom: 14px;
+      font-size: 24px;
+      color: #FFD60A;
+    }
+
+    .mentor-card p {
+      margin: 10px 0;
+      line-height: 1.6;
+      color: #fff3b0;
+      font-size: 16px;
+    }
+
+    .label {
+      color: #FFD60A;
+      font-weight: bold;
+    }
+
+    iframe {
+      width: 100%;
+      height: 320px;
+      border: none;
+      border-radius: 12px;
+      background: #ffffff;
+      margin-bottom: 14px;
+    }
+
+    .resource-link {
+      display: inline-block;
+      margin-top: 8px;
+      color: #FFD60A;
+      text-decoration: underline;
+      font-size: 16px;
+    }
+
+    .resource-link:hover {
+      color: #fff3b0;
+    }
+
+    @media (max-width: 700px) {
+      h1 {
+        font-size: 38px;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+
+      iframe {
+        height: 250px;
+      }
     }
   </style>
 </head>
 
 <body>
+  <div class="container">
+    <h1>Omega Centauri Cluster</h1>
 
-  <h1>Omega Centauri Cluster</h1>
+    <section>
+      <h2>Meet Your Cluster Mentors</h2>
 
+      <div class="mentor-grid">
+        <div class="mentor-card">
+          <h3>Sage</h3>
+          <p><span class="label">Graduating Class:</span> Spring 2026</p>
+          <p><span class="label">Majors/Minors:</span> Astrophysics + Physics</p>
+          <p><span class="label">Bio:</span> Hi all, I am one of the Omega Centauri Cluster heads! I enjoy art, video games (pixel roguelikes specifically), and basketball + volleyball. My research interests currently include microlensing and galactic simulations.</p>
+        </div>
+
+        <div class="mentor-card">
+          <h3>Alana</h3>
+          <p><span class="label">Graduating Class:</span> Spring 2026</p>
+          <p><span class="label">Majors/Minors:</span> Astrophysics + Physics</p>
+          <p><span class="label">Bio:</span> Bio coming soon.</p>
+        </div>
+
+        <div class="mentor-card">
+          <h3>Jordan</h3>
+          <p><span class="label">Graduating Class:</span> Spring 2026</p>
+          <p><span class="label">Majors/Minors:</span> Physics</p>
+          <p><span class="label">Bio:</span> Bio coming soon.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Resources</h2>
+
+      <div class="resource-grid">
+        <div class="resource-card">
+          <h3>Slideshow 1</h3>
+          <iframe 
+            src="https://docs.google.com/presentation/d/1oVOB9wi-TFWfZd3fMIzr8D-iC0IevFsG/preview"
+            allowfullscreen>
+          </iframe>
+          <a class="resource-link" href="https://docs.google.com/presentation/d/1oVOB9wi-TFWfZd3fMIzr8D-iC0IevFsG/edit?usp=sharing&ouid=110453022539884071028&rtpof=true&sd=true" target="_blank">
+            Open slideshow
+          </a>
+        </div>
+
+        <div class="resource-card">
+          <h3>Slideshow 2</h3>
+          <iframe 
+            src="https://docs.google.com/presentation/d/1kO9-lbAHigSkEKY_8DFBjgc0NLeIpL6O/preview"
+            allowfullscreen>
+          </iframe>
+          <a class="resource-link" href="https://docs.google.com/presentation/d/1kO9-lbAHigSkEKY_8DFBjgc0NLeIpL6O/edit?usp=sharing&ouid=110453022539884071028&rtpof=true&sd=true" target="_blank">
+            Open slideshow
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
 </body>
 </html>
