@@ -19,6 +19,32 @@
       margin: 0 auto;
       text-align: center;
     }
+    /* 🌟 NAVBAR (GOLD BUTTONS) */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #000814;
+  background-color: #FFD60A;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #ffe14d;
+  box-shadow: 0 0 14px #FFD60A88;
+  transform: translateY(-2px);
+}
 
     h1 {
       font-size: 48px;
@@ -114,10 +140,17 @@
         height: 250px;
       }
     }
+    
   </style>
 </head>
 
 <body>
+  <nav class="navbar">
+  <a href="index.html">Home</a>
+  <a href="telescope-crew.html">Telescope Crew</a>
+  <a href="cluster-mentorship-program.html">Cluster Mentorship Program</a>
+  <a href="meet-the-officers.html">Meet the Officers</a>
+</nav>
   <div class="container">
     <h1>Omega Centauri Cluster</h1>
 
